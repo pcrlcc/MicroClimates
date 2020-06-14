@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+
+/* ---------   Fonts   -------- */
+
+@font-face {
+  font-family: "Cormorant-Medium";
+  src: url("fonts/Cormorant-Medium.woff2") format("woff2"),
+       url("fonts/Cormorant-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("fonts/Inter-Medium.woff2") format("woff2"),
+       url("fonts/Inter-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/* ---------   Text   -------- */
+
+body, a {
+  margin: 0;
+  color: #2d2d2d;
+  font-family: 'Inter-Medium';
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  font-size: 15px;
+}
+      @media (min-width: 450px) {
+        body, a {
+          font-size: 2vw;
+        }
+      }
+      @media (min-width: 1400px) {
+        body, a {
+          font-size: 24px;
+        }
+      }
+
+a:hover {
+  color: #939393;
+}
+
+/* Usage Notes */
+/* Use 'Large' on H1's and Quotes */
+.large, .quote {
+  font-family: 'Cormorant-Medium';
+  font-size: 24px;
+}
+      @media (min-width: 450px) {
+        .large, .quote {
+          font-size: 5vw;
+        }
+      }
+      @media (min-width: 1400px) {
+        .large, .quote {
+          font-size: 54px;
+        }
+      }
+
+/* Usage Notes */
+/* Use 'White' on the 'Quote' div */
+.white {
+  color: #f2f2f2;
+}
+
+/* Usage Notes */
+/* Use 'Span' to add emphasis to text */
+span {
+  font-family: 'Inter-Medium';
+}
+
+img {width: 100%}
+
+
+
+
+
+
+
+/* ---------   Structure   -------- */
+
+.container {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+      @media (min-width: 450px) {
+        .container {
+          padding-left: 12%;
+          padding-right: 12%;
+        }
+      }
+      @media (min-width: 1400px) {
+        .container {
+          padding-left: 20%;
+          padding-right: 20%;
+        }
+      }
+
+.header, .footer {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  max-width: 1600px;
+}
+      @media (min-width: 450px) {
+        .header, .footer {
+          margin-top: 5vw;
+          margin-bottom: 5vw;
+        }
+      }
+
+.project {
+  margin-bottom: 3vw;
+}
+
+.quote {
+  margin-top: 30%;
+}
+      @media (min-width: 800px) {
+        .quote {
+          margin-top: 20%;
+        }
+      }
+      @media (min-width: 1400px) {
+        .quote {
+          margin-top: 20%;
+        }
+      }
+
+/*.nav {
+  position: fixed;
+  bottom: 10;
+}*/
+
+
+
+
+
+
+
+
+/* ---------   Mobile / Desktop Into   -------- */
+
+.hide-mobile {
+  display: none;
+}
+      @media (min-width: 1025px) {
+        .hide-mobile {
+          display: block;
+        }
+      }
+
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none;
+  }
+}
