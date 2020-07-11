@@ -19,43 +19,65 @@
     <div class="container">
 
 
+      <!-- - - - - - - - - Super 1 - - - - - - - - -->
+      <div class="text-super noselect">
+          <p class="large">Climate warming from <span>human activity is already</span> impacting many natural systems and <span>changing our enviroment.</span></p>
+      </div>
+      <!-- - - - - - - - - Super 2 - - - - - - - - -->
+      <div class="text-super-2nd noselect">
+          <p class="large">By visuallising mostly <span>invisible climate changes</span> as interactive explorations, we hope to raise awareness for the little things that <span>will have a huge impact on the human race.</span></p>
+      </div>
       <!-- - - - - - - - - Header - - - - - - - - -->
-      <div class="header">
-          <h1 class="large">Micro<span>Climates</spam></h1>
-          <p>Abstract explorations about our changing climate on planet Earth.</p>
-          <p class="fade hide-mobile">Select an exploration and then <em>hover</em>, <em>click</em>, <em>drag</em> or <em>scroll</em> to explore.</p>
-          <p class="fade hide-desktop">Select an exploration and then <em>tap</em>, <em>drag</em> or <em>scroll</em> to explore.</p>
+      <div id="home" class="header noselect">
+          <h1 class="x-large">Micro<span>Climates</spam></h1>
+          <p class="large">Explore and craft simple visual artworks, then learn how to <a href="#make-a-change"><span>make a change</span></a>.</p>
       </div>
 
 
       <!-- - - - - - - - - Project List - - - - - - - - -->
-      <a href="aqua/aqua.html" class="project-link">
-        <div class="project" style="background-image: url(images/aqua.png)">
-          <p class="large">Aqua</p>
-        </div>
-      </a>
-      <a href="alga/alga.html" class="project-link">
-        <div class="project" style="background-image: url(images/alga.png)">
-          <p class="large">Alga</p>
-        </div>
-      </a>
-      <a href="anthophila/anthophila.html" class="project-link">
-        <div class="project" style="background-image: url(images/anthophila.png)">
-          <p class="large">Anthophila</p>
-        </div>
-      </a>
-      <p>More MicroClimates coming soon.</p>
+      <div class="projects">
+        <a href="aqua/aqua.html" class="project-link">
+          <div class="project" style="background-image: url(images/aqua.png)">
+            <p class="large">Coastal Flooding</p>
+          </div>
+        </a>
+        <a href="alga/alga.html" class="project-link">
+          <div class="project" style="background-image: url(images/alga.png)">
+            <p class="large">Arctic Algae</p>
+          </div>
+        </a>
+        <a href="anthophila/anthophila.html" class="project-link">
+          <div class="project" style="background-image: url(images/anthophila.png)">
+            <p class="large">Bee Decline</p>
+          </div>
+        </a>
+        <p>More MicroClimates coming soon.</p>
+      </div>
+
+
+      <!-- - - - - - - - - Make a Change - - - - - - - - -->
+      <div class="change" id="make-a-change">
+        <h2 class="x-large">Make a <span>Change</span></h2>
+        <p class="large">Here are a few simple things that you can do to make a impact.</p>
+
+        <!-- SLICK GOES HERE -->
+
+      </div>
 
 
       <!-- - - - - - - - - Footer - - - - - - - - -->
       <div class=footer>
-        <p class="fade">Made in Berlin by <a href="https://www.hallo.pm">Philipp</a> &#38; <a href="http://www.calek.co">Luke</a>.</p>
+        <p class="small fade">Made in Berlin by <a href="https://www.hallo.pm">Philipp</a> &#38; <a href="http://www.calek.co">Luke</a>.</p>
+        <p class="small fade"><a href="#">Get in touch or leave feedback</a></p>
       </div>
 
 
+    <!-- - - - - - - - - Particles - - - - - - - - -->
+    <div id="particles-js"  class="particles"></div>
 
-    </div>
 
-
+    <!-- - - - - - - - - Scripts - - - - - - - - -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

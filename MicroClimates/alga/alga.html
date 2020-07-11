@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anthozoa - MicroClimates</title>
+    <title>Arctic Algae - MicroClimates</title>
     <meta name="description" content="Abstract explorations of our changing climate on planet Earth. Click, scroll and drag to explore.">
 
     <!-- Links -->
@@ -23,7 +23,7 @@
       var c = 0
       let paths = []
       let colors = ['#279767', '#C3E2E0', '#82C572', '#79C49E']
-      
+
       function onMouseDown(event) {
               i = 1;
               mouseDown = true;
@@ -36,10 +36,10 @@
           }));
               if (c<colors.length-1) {c++;} else {c=0}
       }
-      
+
       function onMouseUp(event) {
           mouseDown = false;
-          setTimeout(() => { 
+          setTimeout(() => {
               var tween = paths[0].tweenTo(
                   { opacity: 0 },
                   { duration: 3000 }
@@ -50,10 +50,10 @@
               });
           }, 10000);
       }
-      
+
       view.onFrame = function(event) {
             if (event.count % 2 === 0) {
-          if (mouseDown) { 
+          if (mouseDown) {
               if (i<1.07){
                   i += 0.001
                   paths[paths.length-1].scale(i);
@@ -74,20 +74,27 @@
 
     <!-- - - - - - - - - Quote - - - - - - - - -->
     <div class="container noselect">
-      <div class="quote">
-        <p class="large">As Antarctica warms, we predict <span>the overall mass of snow algae will increase</span>, as the spread to higher ground will significantly outweigh the loss of small island patches of algae.</p>
-        <p><a href="https://www.iflscience.com/environment/the-climate-crisis-is-turning-antarctic-snow-green/" target="_blank">IFL Science</a></p>
+      <div id="quote" class="quote">
+        <p class="large">As the Antarctica warms, <span>snow algae will increase,</span> potentially absorbing more sun, heating the surrounding area and <span>leading to a faster loss of sea ice.</span></p>
+        <p class="small">Tap and hold to grow an algae artwork.</p>
       </div>
     </div>
 
 
     <!-- - - - - - - - - Navigation - - - - - - - - -->
     <div class="home">
-      <a class="icon-wrapper" href="../index.html">
+      <a class="icon-wrapper" href="../index.html#home">
         <span class="icon icon-home"></span>
       </a>
     </div>
 
 
+    <!-- - - - - - - - - Scripts - - - - - - - - -->
+    <script>
+        var source = document.getElementById('quote');
+        document.getElementById('climateCanvas').onclick = function () {
+            source.classList.add("opacity");
+        }
+    </script>
   </body>
 </html>
