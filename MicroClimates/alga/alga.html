@@ -18,7 +18,49 @@
     <!-- Place your Paperscript here -->
     <script type="text/paperscript" canvas="climateCanvas">
 
-    // PLACE YOUR PAPERSCRIPT HERE
+      var mouseDown = false
+      var i = 1
+      var c = 0
+      let paths = []
+      let colors = ['#279767', '#C3E2E0', '#82C572', '#79C49E']
+      
+      function onMouseDown(event) {
+              i = 1;
+              mouseDown = true;
+              paths.push (new Path.Circle({
+              center: event.point,
+              radius: 40,
+              strokeColor : '#f2f2f2',
+              strokeWidth : 5,
+              fillColor: colors[c]
+          }));
+              if (c<colors.length-1) {c++;} else {c=0}
+      }
+      
+      function onMouseUp(event) {
+          mouseDown = false;
+          setTimeout(() => { 
+              var tween = paths[0].tweenTo(
+                  { opacity: 0 },
+                  { duration: 3000 }
+              );
+              paths.shift();
+              tween.then(function() {
+                  this.remove;
+              });
+          }, 10000);
+      }
+      
+      view.onFrame = function(event) {
+            if (event.count % 2 === 0) {
+          if (mouseDown) { 
+              if (i<1.07){
+                  i += 0.001
+                  paths[paths.length-1].scale(i);
+              } ;
+          }
+      }}
+
 
     </script>
 
