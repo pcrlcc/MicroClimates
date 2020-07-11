@@ -309,3 +309,14 @@ canvas[resize] {
     display: none;
   }
 }
+
+
+/* ---------   Carousel   -------- */
+
+
+.carousel-cell {
+  width: 33%;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
