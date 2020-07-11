@@ -143,6 +143,7 @@ img {width: 100%}
 .container {
   padding-left: 6%;
   padding-right: 6%;
+  overflow-x: visible;
 }
       @media (min-width: 500px) {
         .container {
@@ -184,6 +185,7 @@ img {width: 100%}
 .change {
   padding-top: 3vw;
   padding-bottom: 10vw;
+    overflow-x: visible;
 }
 .footer {
   padding-bottom: 2vw;
