@@ -2,6 +2,12 @@
 /* CSS Document */
 
 
+/* ---------   Colors   -------- */
+/* Background Light Grey = #F2F2F2 */
+/* Black / Text Dark Grey  = #2D2D2D */
+/* Interaction Mid Grey  = #A1A1A1 */
+
+
 
 
 /* ---------   Fonts   -------- */
@@ -48,12 +54,6 @@ body {
           font-size: 24px;
         }
       }
-a {
-  color: #2d2d2d;
-}
-a:hover {
-  color: #2d2d2d;
-}
 
 /* Usage Notes */
 /* Use 'Large' on H1's and Quotes */
@@ -100,6 +100,19 @@ a:hover {
           font-size: 18px;
         }
       }
+
+a {
+  color: #2d2d2d;
+}
+a:hover {
+  color: #A1A1A1;
+}
+.small a {
+  color: #A1A1A1;
+}
+.small a:hover {
+  color: #2d2d2d;
+}
 
 /* Usage Notes */
 /* Use 'White' on the 'Quote' div */
