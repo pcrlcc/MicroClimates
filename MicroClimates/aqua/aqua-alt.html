@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- General -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aqua - MicroClimates</title>
+    <meta name="description" content="Abstract explorations of our changing climate on planet Earth. Click, scroll and drag to explore.">
+
+    <!-- Links -->
+    <link href="../main.css" rel="stylesheet">
+    <!-- Load latest acron version first -->
+    <script type="text/javascript" src="https://unpkg.com/acorn"></script>
+    <!-- Then load Paper.js -->
+    <script type="text/javascript" src="https://unpkg.com/paper"></script>
+    <!-- Place your Paperscript here -->
+    <script type="text/paperscript" canvas="climateCanvas">
+
+      var screenWidth = view.size.width;
+      var screenHeight = view.size.height;
+      let colorCount = 0;
+      // var waves = [];
+      let colors = ['#91C5DE', '#367AB2', '#295E86', '#274A56'];
+
+      var wave;
+      var waveDimentions = new Rectangle(0, screenHeight, screenWidth, screenHeight);
+
+      function onMouseDown(event) {
+        var wave = new Path.Rectangle(waveDimentions);
+        wave.fillColor = `colors[colorCount]`;
+        wave.y = 0;
+        wave.opacity = .5;
+        wave.blendMode = 'multiply';
+        console.log('MouseDown');
+        console.log(wave.y);
+      }
+
+      function onMouseDrag(event) {
+      	waveDimentions.y = event.point.y;
+        console.log(event.point.y);
+      }
+
+      // function onMouseUp(event) {
+      //   if (colorCount<colors.length-1) {colorCount++;} else {colorCount=0};
+      //   var tween = wave.tweenTo(
+      //       { 'position.y': screenHeight+screenHeight, 'opacity': 0 },
+      //       { duration: 30000, start: false }
+      //   );
+      //
+      //   tween.start();
+      // }
+    </script>
+
+  </head>
+  <body>
+
+
+    <!-- - - - - - - - - Navigation - - - - - - - - -->
+
+    <div id="navigation">
+      <a id="home" href="../index.html"><object type="image/svg+xml" data="../images/home.svg"></object></a>
+    </div>
+
+
+
+    <!-- - - - - - - - - Quote - - - - - - - - -->
+
+    <div class="container noselect">
+      <div class="quote">
+        <p class="large">Florida’s next two decades could be more disruptive than any period in its history as climate change threatens the state’s 8,500-mile coastline. New modeling reveals that <span>‘100-year floods’ could occur every few years</span>, rather than once a century in many locations.</p>
+        <p><a>IFL Science</a></p>
+      </div>
+    </div>
+
+
+    <!-- - - - - - - - - Paper.js - - - - - - - - -->
+
+    <canvas id="climateCanvas" resize></canvas>
+
+
+  </body>
+</html>

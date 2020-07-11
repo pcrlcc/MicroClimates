@@ -27,7 +27,10 @@
 
 /* ---------   Text   -------- */
 
-body, a {
+body {
+  background-color: #F2F2F2;
+}
+body {
   margin: 0;
   color: #2d2d2d;
   font-family: 'Inter-Medium';
@@ -35,30 +38,47 @@ body, a {
   text-align: center;
   font-size: 15px;
 }
-      @media (min-width: 450px) {
-        body, a {
+      @media (min-width: 500px) {
+        body {
           font-size: 2vw;
         }
       }
       @media (min-width: 1400px) {
-        body, a {
+        body {
           font-size: 24px;
         }
       }
-
+a {
+  color: #2d2d2d;
+}
 a:hover {
-  color: #939393;
+  color: #2d2d2d;
 }
 
 /* Usage Notes */
 /* Use 'Large' on H1's and Quotes */
+.x-large {
+  font-family: 'Cormorant-Medium';
+  font-size: 32px;
+}
+      @media (min-width: 500px) {
+        .x-large {
+          font-size: 4.5vw;
+        }
+      }
+      @media (min-width: 1400px) {
+        .x-large {
+          font-size: 70px;
+        }
+      }
+
 .large, .quote {
   font-family: 'Cormorant-Medium';
   font-size: 24px;
 }
-      @media (min-width: 450px) {
+      @media (min-width: 500px) {
         .large, .quote {
-          font-size: 5vw;
+          font-size: 3.5vw;
         }
       }
       @media (min-width: 1400px) {
@@ -67,10 +87,27 @@ a:hover {
         }
       }
 
+.small {
+  font-size: 16px;
+}
+      @media (min-width: 500px) {
+        .small {
+          font-size: 1vw;
+        }
+      }
+      @media (min-width: 1400px) {
+        .small {
+          font-size: 18px;
+        }
+      }
+
 /* Usage Notes */
 /* Use 'White' on the 'Quote' div */
 .white {
   color: #f2f2f2;
+}
+.fade {
+  color: #a1a1a1;
 }
 
 /* Usage Notes */
@@ -86,14 +123,13 @@ img {width: 100%}
 
 
 
-
 /* ---------   Structure   -------- */
 
 .container {
   padding-left: 6%;
   padding-right: 6%;
 }
-      @media (min-width: 450px) {
+      @media (min-width: 500px) {
         .container {
           padding-left: 12%;
           padding-right: 12%;
@@ -105,27 +141,82 @@ img {width: 100%}
           padding-right: 20%;
         }
       }
+.particles {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+}
 
-.header, .footer {
+.text-super {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-super-2nd {
+  padding-bottom: 10vw;
+}
+.header {
+  padding-bottom: 5vw;
+}
+.change {
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+.footer {
+  padding-bottom: 2vw;
+}
+
+/*.header, .footer {
   margin-top: 35px;
   margin-bottom: 35px;
   max-width: 1600px;
 }
-      @media (min-width: 450px) {
+      @media (min-width: 500px) {
         .header, .footer {
           margin-top: 5vw;
           margin-bottom: 5vw;
         }
-      }
+      }*/
 
 .project {
   margin-bottom: 3vw;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+  text-align: center;
+  background-position: center center;
+  background-size: 100%;
+  transition: 1s;
+  background-size: cover;
 }
-
+.project:hover {
+  background-position: center center;
+  transition: 1s;
+  text-decoration: underline;
+}
+.project-link {
+  text-decoration: none;
+  color: #fff;
+}
+.project-link:hover {
+  color: #fff;
+}
 .quote {
-  margin-top: 30%;
+  position: absolute;
+  z-index: -100;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
-      @media (min-width: 800px) {
+.quote-link {
+  z-index: 100;
+}
+      /*@media (min-width: 800px) {
         .quote {
           margin-top: 20%;
         }
@@ -134,16 +225,66 @@ img {width: 100%}
         .quote {
           margin-top: 20%;
         }
-      }
+      }*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
-/*.nav {
-  position: fixed;
-  bottom: 10;
-}*/
 
 
 
 
+
+
+
+/* ---------   Navigation   -------- */
+
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  margin: 15px;
+  z-index: 100;
+}
+.icon-wrapper:hover {
+  opacity: .5;
+}
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+.icon-home {
+  background-image: url('../MicroClimates/images/home.svg');
+}
+
+
+
+
+
+
+
+/* ---------   Paper.js Canvas   -------- */
+
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+#climateCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 
