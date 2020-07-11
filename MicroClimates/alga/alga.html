@@ -24,12 +24,16 @@
       let paths = []
       let colors = ['#279767', '#C3E2E0', '#82C572', '#79C49E']
 
+      var circleRadius = view.size.width/18
+
+      if (circleRadius > 30) {circleRadius=30}
+
       function onMouseDown(event) {
               i = 1;
               mouseDown = true;
               paths.push (new Path.Circle({
               center: event.point,
-              radius: 40,
+              radius: circleRadius,
               strokeColor : '#f2f2f2',
               strokeWidth : 5,
               fillColor: colors[c]
@@ -48,7 +52,7 @@
               tween.then(function() {
                   this.remove;
               });
-          }, 10000);
+          }, 20000);
       }
 
       view.onFrame = function(event) {
