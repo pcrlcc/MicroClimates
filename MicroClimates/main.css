@@ -62,9 +62,10 @@ body {
 
 
 h3 {
-  font-family: 'Inter-Medium';
-  font-weight: 700;
-  font-size: 22px;
+  font-family: 'Cormorant-Medium';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
   margin: 0;
 }
 
