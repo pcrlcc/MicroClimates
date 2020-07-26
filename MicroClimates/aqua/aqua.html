@@ -21,11 +21,17 @@
       var screenHeight = view.size.height;
       let colorCount = 0;
       var paths = [];
+      var createRipple = false;
       let colors = ['#91C5DE', '#367AB2', '#295E86', '#274A56'];
+
+      var i = 1
 
       var wave;
 
+      var ripples = [];
+
       function onMouseDown(event) {
+        i = 1;
         // Create a new wave and give it a stroke color:
         wave = new Path();
         wave.strokeColor = colors[colorCount];
@@ -35,23 +41,55 @@
         wave.add(screenWidth/2,screenHeight);
         wave.opacity = .5;
         wave.blendMode = 'multiply';
+        createRipple = true;
       }
 
       function onMouseDrag(event) {
+        if (event.delta.y<0) {
+            wave.add(screenWidth/2,event.point.y);
+            createRipple = false;
+          } 
         // Every drag event, add a segment
         // to the wave at the position of the mouse:
-        wave.add(screenWidth/2,event.point.y);
       }
 
       function onMouseUp(event) {
-        if (colorCount<colors.length-1) {colorCount++;} else {colorCount=0};
-        var tween = wave.tweenTo(
-            { 'position.y': screenHeight+screenHeight, 'opacity': 0 },
-            { duration: 30000, start: false }
-        );
+        if (createRipple){
+          createRipple = false;
+          ripples.push (new Shape.Circle({
+            center: event.point,
+            radius: 3,
+            strokeWidth : 1,
+            fillColor: null,
+            strokeColor: colors[colorCount]
+          }))
 
-        tween.start();
-      }
+          var tween = ripples[ripples.length-1].tweenTo(
+            { opacity: 0 },
+            { duration: 1300 }
+          );
+            
+          tween.then(function() {
+            this.remove;
+          });
+        };
+
+        if (colorCount<colors.length-1) {colorCount++;} else {colorCount=0};
+          var tween = wave.tweenTo(
+            { 'position.y': screenHeight+screenHeight, 'opacity': 0 },
+            { duration: 30000}
+          );
+        };
+
+        view.onFrame = function(event) {
+        if (ripples.length>0){
+
+        ripples.forEach(function (item, index) {
+          if (ripples[index].opacity >0)
+            ripples[index].scale(1.022);          
+          }); 
+        };}
+
     </script>
 
   </head>
