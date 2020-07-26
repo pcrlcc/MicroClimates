@@ -83,7 +83,7 @@ h4 {
 .x-large {
   font-family: 'Cormorant-Medium';
   font-size: 32px;
-}1
+}
       @media (min-width: 500px) {
         .x-large {
           font-size: 4.5vw;
@@ -215,8 +215,18 @@ img {width: 100%}
   align-items: center;
 }
 .text-super-2nd {
-  padding-bottom: 7vw;
+  padding-bottom: 40vw;
 }
+      @media (min-width: 500px) {
+        .text-super-2nd {
+          padding-bottom: 15vw;
+        }
+      }
+      @media (min-width: 1400px) {
+        .text-super-2nd {
+          padding-bottom: 15vw;
+        }
+      }
 .header {
   padding-top: 3vw;
   padding-bottom: 2vw;
@@ -391,14 +401,14 @@ canvas[resize] {
     @media (min-width: 500px) {
       .carousel-cell {
         width: 300px;
-        min-height: 350px;
+        min-height: 380px;
         margin-right: 20px;
       }
     }
     @media (min-width: 1400px) {
       .carousel-cell {
         width: 350px;
-        min-height: 380px;
+        min-height: 400px;
         margin-right: 30px;
       }
     }
