@@ -10,7 +10,7 @@
     <meta name="description" content="Abstract explorations of our changing climate on planet Earth. Click, scroll and drag to explore.">
 
     <!-- Links -->
-    <link href="../main.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
     <!-- Load latest acron version first -->
     <script type="text/javascript" src="https://unpkg.com/acorn"></script>
     <!-- Then load Paper.js -->
@@ -21,7 +21,6 @@
     // PLACE YOUR PAPERSCRIPT HERE
 
     </script>
-
   </head>
   <body>
 
@@ -32,20 +31,31 @@
 
     <!-- - - - - - - - - Quote - - - - - - - - -->
     <div class="container noselect">
-      <div class="quote">
+      <div id="quote" class="quote">
         <p class="large"><span>90% of world’s wild flowering plant species</span> depend, entirely, or at least partly, <span>on animal pollination</span>, along with over 75% of world’s food crops, 35% of agricultural land.</p>
-        <p class="quote-link"><a href="https://www.timesofisrael.com/to-bee-or-not-to-bee-international-bee-day-highlights-plight-of-pollinators/" target="_blank">The Times of Israel</a></p>
+        <p class="small hide-desktop">Mobile interaction descirption TBD.</p>
+        <p class="small hide-mobile">Desktop interaction descirption TBD.</p>
       </div>
     </div>
 
 
     <!-- - - - - - - - - Navigation - - - - - - - - -->
-    <div class="home">
-      <a class="icon-wrapper" href="../index.html">
+    <div class="nav">
+      <a class="icon-wrapper" href="../index.html#home">
         <span class="icon icon-home"></span>
+      </a>
+      <a class="icon-wrapper icon-right" onClick="window.location.reload();" href="#">
+        <span class="icon icon-reload"></span>
       </a>
     </div>
 
 
+    <!-- - - - - - - - - Scripts - - - - - - - - -->
+    <script>
+        var source = document.getElementById('quote');
+        document.getElementById('climateCanvas').onclick = function () {
+            source.classList.add("opacity");
+        }
+    </script>
   </body>
 </html>
