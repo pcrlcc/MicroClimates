@@ -46,7 +46,7 @@
         createRipple = true;
       }
 
-      function onMouseDrag(event) { 
+      function onMouseDrag(event) {
         console.log(dragDelta);
         if (event.delta.y<0) {
             dragDelta -= event.delta.y
@@ -54,7 +54,7 @@
         if (dragDelta>dragThreshold){
             wave.add(screenWidth/2,event.point.y);
             createRipple = false;
-          } 
+          }
         // Every drag event, add a segment
         // to the wave at the position of the mouse:
       }
@@ -75,7 +75,7 @@
             { opacity: 0 },
             { duration: 1300 }
           );
-            
+
           tween.then(function() {
             this.remove;
           });
@@ -93,13 +93,11 @@
 
         ripples.forEach(function (item, index) {
           if (ripples[index].opacity >0)
-            ripples[index].scale(1.05);          
-          }); 
+            ripples[index].scale(1.05);
+          });
         };}
 
     </script>
-
-
   </head>
   <body>
 
@@ -113,17 +111,17 @@
       <div id="quote" class="quote">
         <p class="large"><span>‘100-year floods’ could occur every few years</span>, rather than once a century in many locations that are close to sea level, <span>risking lives and property.</span></p>
         <p class="small hide-desktop">Swipe up to create a flood artwork.</p>
-        <p class="small hide-mobile">Click and drap up to create a flood artwork.</p>
+        <p class="small hide-mobile">Click + drag  up to create a flood artwork.</p>
       </div>
     </div>
 
 
     <!-- - - - - - - - - Navigation - - - - - - - - -->
     <div class="nav">
-      <a class="icon-wrapper" href="../index.html#home">
+      <a class="icon-wrapper" href="index.html#home">
         <span class="icon icon-home"></span>
       </a>
-      <a class="icon-wrapper icon-right" onClick="window.location.reload();">
+      <a class="icon-wrapper icon-right" onClick="window.location.reload();" href="#">
         <span class="icon icon-reload"></span>
       </a>
     </div>
