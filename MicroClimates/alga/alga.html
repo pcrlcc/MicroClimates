@@ -42,17 +42,17 @@
 
       function onMouseUp(event) {
           mouseDown = false;
-          setTimeout(() => {
-              var tween = paths[0].tweenTo(
-                  { opacity: 0 },
-                  { duration: 3000 }
-              );
-              paths.shift();
-              tween.then(function() {
-                  this.remove;
-              });
-          }, 20000);
-      }
+      //     setTimeout(() => {
+      //         var tween = paths[0].tweenTo(
+      //             { opacity: 0 },
+      //             { duration: 3000 }
+      //         );
+      //         paths.shift();
+      //         tween.then(function() {
+      //             this.remove;
+      //         });
+      //     }, 20000);
+       }
 
       view.onFrame = function(event) {
             if (event.count % 2 === 0) {
