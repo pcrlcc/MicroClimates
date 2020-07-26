@@ -20,6 +20,8 @@
       var screenWidth = view.size.width;
       var screenHeight = view.size.height;
       let colorCount = 0;
+      var dragDelta = 0;
+      var dragThreshold = 30;
       var paths = [];
       var createRipple = false;
       let colors = ['#91C5DE', '#367AB2', '#295E86', '#274A56'];
@@ -44,16 +46,21 @@
         createRipple = true;
       }
 
-      function onMouseDrag(event) {
+      function onMouseDrag(event) { 
+        console.log(dragDelta);
         if (event.delta.y<0) {
+            dragDelta -= event.delta.y
+            }
+        if (dragDelta>dragThreshold){
             wave.add(screenWidth/2,event.point.y);
             createRipple = false;
-          }
+          } 
         // Every drag event, add a segment
         // to the wave at the position of the mouse:
       }
 
       function onMouseUp(event) {
+        dragDelta = 0
         if (createRipple){
           createRipple = false;
           ripples.push (new Shape.Circle({
@@ -68,7 +75,7 @@
             { opacity: 0 },
             { duration: 1300 }
           );
-
+            
           tween.then(function() {
             this.remove;
           });
@@ -86,11 +93,12 @@
 
         ripples.forEach(function (item, index) {
           if (ripples[index].opacity >0)
-            ripples[index].scale(1.05);
-          });
+            ripples[index].scale(1.05);          
+          }); 
         };}
 
     </script>
+
 
   </head>
   <body>
