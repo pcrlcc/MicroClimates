@@ -13,7 +13,6 @@
     <link href="main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
-
   </head>
   <body>
 
@@ -27,12 +26,12 @@
       </div>
       <!-- - - - - - - - - Super 2 - - - - - - - - -->
       <div class="text-super-2nd noselect">
-          <p class="large">By visuallising mostly <span>invisible climate changes</span> as interactive explorations, we hope to raise awareness for the little things that <span>will have a huge impact on the human race.</span></p>
+          <p class="large">By visuallising <span>invisible climate changes</span> as interactive explorations, we hope to raise awareness for the little things that <span>will have a huge impact on our future.</span></p>
       </div>
       <!-- - - - - - - - - Header - - - - - - - - -->
       <div id="home" class="header noselect">
           <h1 class="x-large">Micro<span>Climates</spam></h1>
-          <p class="large">Explore and craft simple visual artworks, then learn how to <a href="#make-a-change"><span>make a change</span></a>.</p>
+          <p class="large">Explore and craft simple climate-focused visual artworks, then learn how to <a href="#make-a-change"><span>make a change</span></a>.</p>
       </div>
 
 
@@ -61,39 +60,47 @@
       <div class="change" id="make-a-change">
         <h2 class="x-large">Make a <span>Change</span></h2>
         <p class="large">Here are a few simple things that you can do to make a impact.</p>
-
-
-      <div class="main-carousel" data-flickity='{ "prevNextButtons": false, "pageDots": false, "contain": true}'>
-        <div class="carousel-cell"><h3>Action</h3><h4>CO2 Savings</h4><p>Lorem ipsun dolor sit amet consectetuer adipiscing elit.</p></div>
-        <div class="carousel-cell"><h3>Action</h3><h4>CO2 Savings</h4><p>Lorem ipsun dolor sit amet consectetuer adipiscing elit.</p></div>
-        <div class="carousel-cell"><h3>Action</h3><h4>CO2 Savings</h4><p>Lorem ipsun dolor sit amet consectetuer adipiscing elit.</p></div>
-        <div class="carousel-cell"><h3>Action</h3><h4>CO2 Savings</h4><p>Lorem ipsun dolor sit amet consectetuer adipiscing elit.</p></div>
-        <div class="carousel-cell"><h3>Action</h3><h4>CO2 Savings</h4><p>Lorem ipsun dolor sit amet consectetuer adipiscing elit.</p></div>
-      
+        <div class="main-carousel" data-flickity='{ "prevNextButtons": false, "pageDots": false, "contain": true}'>
+          <div class="carousel-cell"><img class="bar-graphic" src="images/bar01.png"><h3>Live car free</h3>                     <h4>2.4 tons of CO2 per year</h4>   <p class="small">Try selling your car and taking public transport, riding a bicycle or walking as your primary means of transportation.</p>              <a class="button" target="_blank" href="https://atypicallife.org/car-free-living/">Find out More ↗</a></div>
+          <div class="carousel-cell"><img class="bar-graphic" src="images/bar02.png"><h3>Avoid one transatlantic flight</h3>    <h4>1.6 tons of CO2 per year</h4>   <p class="small">Try short distance travel by train or bus on your next holiday. Long distance fligths are high-impact CO2 polluters.</p>                <a class="button" target="_blank" href="https://www.bbc.com/future/article/20200218-climate-change-how-to-cut-your-carbon-emissions-when-flying">Find out More ↗</a></div>
+          <div class="carousel-cell"><img class="bar-graphic" src="images/bar03.png"><h3>Buy green energy</h3>                  <h4>1.5 tons of CO2 per year</h4>   <p class="small">Try changing your energy provider from coal or natural gas to a renewable wind or solar provider.</p>                                   <a class="button" target="_blank" href="https://wwf.panda.org/get_involved/live_green/energy_efficiency/renewable_energy/">Find out More ↗</a></div>
+          <div class="carousel-cell"><img class="bar-graphic" src="images/bar04.png"><h3>Plant-based diet</h3>                  <h4>0.8 tons of CO2 per year</h4>   <p class="small">Try reducing or replacing animal products in your diet with plant based ingredients that require sell resources to grow & process.</p>  <a class="button" target="_blank" href="https://www.earthday.org/un-report-plant-based-diets-provide-major-opportunities-to-address-climate-crisis/">Find out More ↗</a></div>
+          <div class="carousel-cell"><img class="bar-graphic" src="images/bar05.png"><h3>Wash clothes in cold water</h3>        <h4>0.3 tons of CO2 per year</h4>   <p class="small">Try using the cold cycle on your next load of washing. This uses less energy and will make your clothes last longer.</p>                <a class="button" target="_blank" href="https://changeforclimate.ca/action/wash-your-clothes-in-cold-water">Find out More ↗</a></div>
+        </div>
       </div>
-
-      </div>  
-
-     
-
 
 
       <!-- - - - - - - - - Footer - - - - - - - - -->
       <div class=footer>
-        <p class="small fade">Made in Berlin by <a href="https://www.hallo.pm">Philipp</a> &#38; <a href="http://www.calek.co">Luke</a>.</p>
+        <p class="small fade">Made in Berlin by <a href="https://www.hallo.pm">Philipp</a> &#38; <a href="http://www.calek.co">Luke</a> using change recomendations from <a href="https://iopscience.iop.org/article/10.1088/1748-9326/aa7541" target="_blank">IOP Science</a>.</p>
         <p class="small fade"><a href="#">Get in touch or leave feedback</a></p>
       </div>
 
     </div>
 
+
+
+
+
     <!-- - - - - - - - - Particles - - - - - - - - -->
-    <div id="particles-js"  class="particles"></div>
+    <div id="particles-js"  class="particles" style="opacity: 0.35;"></div>
 
 
     <!-- - - - - - - - - Scripts - - - - - - - - -->
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).on('click', 'a[href^="#make-a-change"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+      });
+    </script>
+
 
   </body>
 </html>
