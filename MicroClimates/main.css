@@ -394,6 +394,8 @@ canvas[resize] {
   margin-right: 15px;
   background: #fff;
   padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   -webkit-box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.05);
   -moz-box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.05);
   box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.05);
@@ -417,4 +419,75 @@ canvas[resize] {
   width: 140px;
   height: 140px;
   align-items: center;
+}
+
+.cell1 {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #279668;
+}
+.button1 {
+  border: #279668;
+  border-width: 2px;
+  border-style: solid;
+  color: #279668;
+}
+.button1:hover {
+  background-color: #279668;
+}
+.cell2 {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #298C76;
+}
+.button2 {
+  border: #298C76;
+  border-width: 2px;
+  border-style: solid;
+  color: #298C76;
+}
+.button2:hover {
+  background-color: #298C76;
+}
+.cell3 {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #2B8284;
+}
+.button3 {
+  border: #2B8284;
+  border-width: 2px;
+  border-style: solid;
+  color: #2B8284;
+}
+.button3:hover {
+  background-color: #2B8284;
+}
+.cell4 {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #2E7892;
+}
+.button4 {
+  border: #2E7892;
+  border-width: 2px;
+  border-style: solid;
+  color: #2E7892;
+}
+.button4:hover {
+  background-color: #2E7892;
+}
+.cell5 {
+  border-bottom: solid;
+  border-bottom-width: 6px;
+  border-bottom-color: #306E9F;
+}
+.button5 {
+  border: #306E9F;
+  border-width: 2px;
+  border-style: solid;
+  color: #306E9F;
+}
+.button5:hover {
+  background-color: #306E9F;
 }
