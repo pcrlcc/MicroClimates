@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- General -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anthozoa - MicroClimates</title>
+    <meta name="description" content="Abstract explorations of our changing climate on planet Earth. Click, scroll and drag to explore.">
+
+    <!-- Links -->
+    <link href="main.css" rel="stylesheet">
+    <!-- Load latest acron version first -->
+    <script type="text/javascript" src="https://unpkg.com/acorn"></script>
+    <!-- Then load Paper.js -->
+    <script type="text/javascript" src="https://unpkg.com/paper"></script>
+    <!-- Place your Paperscript here -->
+    <script type="text/paperscript" canvas="climateCanvas">
+
+      var screenWidth = view.size.width;
+      var screenHeight = view.size.height;
+      let color = { hue: 48, saturation: 0.24, brightness: 1 }
+      var sides = 6;
+      var radius = screenWidth/20;
+      var xOffset = screenWidth/16;
+      var yOffset = screenWidth/12;
+      var x,y = xOffset;
+      var k = 1;
+      var combs = [];
+      var c = 0;
+
+      view.translate (-radius*2);
+
+      for (let i = 0; i <= screenHeight/xOffset ; i++) {
+          if (k < 2){
+              x=screenWidth/9;
+          }
+          else {
+              x = xOffset;
+              k = 0;
+          }
+          for (let j = 0; j < screenWidth/yOffset; j++) {
+          combs[c] = new Path.RegularPolygon(new Point(x, y), sides, radius);
+              x += screenWidth/10;
+              combs[c].fillColor = color;
+              combs[c].opacity = 0;
+              combs[c].onMouseEnter = function(event) {
+                  if (this.fillColor.saturation < 1 && this.opacity > 0){
+                  this.opacity = 1;
+                  this.fillColor.saturation += 0.1;
+                  }
+              }
+          c++
+          };
+          y += yOffset;
+          k++;
+      }
+
+      view.onFrame = function(event) {
+          for (let p = 0; p < combs.length; p++ ) {
+            if (combs[p].fillColor.saturation >= color.saturation) {
+                combs[p].fillColor.saturation = (combs[p].fillColor.saturation - 0.0001).toFixed(4);
+            }
+          }}
+
+      setInterval(function(){
+          var p = Math.floor(Math.random() * combs.length);
+              if (combs[p].opacity == 1 && combs[p].fillColor.saturation < color.saturation+.01){
+                  var tween = combs[p].tweenTo(
+                    { opacity: 0 },
+                    { duration: 1000 }
+                  );
+
+              } else if (combs[p].opacity == 0  ){
+                  var tween = combs[p].tweenTo(
+                    { opacity: 1 },
+                    { duration: 1000 }
+                  );
+              }
+      }, 50);
+
+    </script>
+  </head>
+  <body>
+
+
+    <!-- - - - - - - - - Paper.js - - - - - - - - -->
+    <canvas id="climateCanvas" resize></canvas>
+
+
+    <!-- - - - - - - - - Quote - - - - - - - - -->
+    <div class="container noselect">
+      <div id="quote" class="quote">
+        <p class="large"><span>90% of world’s wild flowering plant species</span> depend, entirely, or at least partly, <span>on animal pollination</span>, along with over 75% of world’s food crops, 35% of agricultural land.</p>
+        <p class="small hide-desktop">Mobile interaction descirption TBD.</p>
+        <p class="small hide-mobile">Desktop interaction descirption TBD.</p>
+      </div>
+    </div>
+
+
+    <!-- - - - - - - - - Navigation - - - - - - - - -->
+    <div class="nav">
+      <a class="icon-wrapper" href="index.html#home">
+        <span class="icon icon-home"></span>
+      </a>
+      <a class="icon-wrapper icon-right" onClick="window.location.reload();" href="#">
+        <span class="icon icon-reload"></span>
+      </a>
+    </div>
+
+
+    <!-- - - - - - - - - Scripts - - - - - - - - -->
+    <script>
+        var source = document.getElementById('quote');
+        document.getElementById('climateCanvas').onclick = function () {
+            source.classList.add("opacity");
+        }
+    </script>
+  </body>
+</html>
