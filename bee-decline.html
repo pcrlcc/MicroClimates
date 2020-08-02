@@ -29,9 +29,9 @@
       var k = 1;
       var combs = [];
       var c = 0;
-      
+
       view.translate (-radius*2);
-      
+
       for (let i = 0; i <= screenHeight/xOffset ; i++) {
           if (k < 2){
               x=screenHeight/9;
@@ -49,7 +49,7 @@
                   if (this.fillColor.saturation < 1 && this.opacity > 0){
                   this.opacity = 1;
                   this.fillColor.saturation += 0.3;
-                  } 
+                  }
               }
           c++
           };
@@ -60,11 +60,11 @@
       view.onFrame = function(event) {
           for (let p = 0; p < combs.length; p++ ) {
             if (combs[p].fillColor.saturation >= color.saturation) {
-                combs[p].fillColor.saturation = (combs[p].fillColor.saturation - 0.0001).toFixed(4); 
-            }      
+                combs[p].fillColor.saturation = (combs[p].fillColor.saturation - 0.0001).toFixed(4);
+            }
           }}
-      
-      function initialDelay() { 
+
+      function initialDelay() {
         setInterval(function(){
           var p = Math.floor(Math.random() * combs.length);
               if (combs[p].opacity == 1 && combs[p].fillColor.saturation < color.saturation+.01){
@@ -72,7 +72,7 @@
                     { opacity: 0 },
                     { duration: 1000 }
                   );
-            
+
               } else if (combs[p].opacity == 0  ){
                   var tween = combs[p].tweenTo(
                     { opacity: 1 },
@@ -81,7 +81,7 @@
               }
       }, 40);
       }
-        setTimeout(initialDelay, 3000); 
+        setTimeout(initialDelay, 3000);
     </script>
   </head>
   <body>
@@ -95,8 +95,8 @@
     <div class="container noselect">
       <div id="quote" class="quote">
         <p class="large"><span>90% of world’s wild flowering plant species</span> depend, entirely, or at least partly, <span>on animal pollination</span>, along with over 75% of world’s food crops, 35% of agricultural land.</p>
-        <p class="small hide-desktop">Mobile interaction descirption TBD.</p>
-        <p class="small hide-mobile">Desktop interaction descirption TBD.</p>
+        <p class="small hide-desktop">Tap to create a bee hive artwork.</p>
+        <p class="small hide-mobile">Click to create a bee hive artwork.</p>
       </div>
     </div>
 
