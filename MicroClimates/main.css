@@ -185,7 +185,7 @@ img {width: 100%}
 .container {
   padding-left: 6%;
   padding-right: 6%;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
       @media (min-width: 500px) {
         .container {
