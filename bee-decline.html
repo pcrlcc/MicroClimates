@@ -45,7 +45,7 @@
               x += screenHeight/10;
               combs[c].fillColor = color;
               combs[c].opacity = 0;
-              combs[c].onMouseEnter = function(event) {
+              combs[c].onClick = function(event) {
                   if (this.fillColor.saturation < 1 && this.opacity > 0){
                   this.opacity = 1;
                   this.fillColor.saturation += 0.3;
