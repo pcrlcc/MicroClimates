@@ -246,8 +246,8 @@ img {width: 100%}
 
 .project {
   margin-bottom: 3vw;
-  padding-top: 8vw;
-  padding-bottom: 8vw;
+  padding-top: 32vw;
+  padding-bottom: 32vw;
   text-align: center;
   background-position: center center;
   background-size: 100%;
@@ -259,6 +259,23 @@ img {width: 100%}
   transition: 1s;
   text-decoration: underline;
 }
+        @media (min-width: 500px) {
+          .project {
+            margin-bottom: 3vw;
+            padding-top: 8vw;
+            padding-bottom: 8vw;
+            text-align: center;
+            background-position: center center;
+            background-size: 100%;
+            transition: 1s;
+            background-size: cover;
+          }
+        }
+        @media (min-width: 1400px) {
+          .project {
+            padding-bottom: 7vw;
+          }
+        }
 .project-link {
   text-decoration: none;
   color: #fff;
@@ -390,7 +407,7 @@ canvas[resize] {
 
 .carousel-cell {
   width: 80%;
-  min-height: 420px;
+  min-height: 440px;
   margin-right: 15px;
   background: #fff;
   padding: 20px;
