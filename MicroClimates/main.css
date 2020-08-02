@@ -424,58 +424,58 @@ canvas[resize] {
 .cell1 {
   border-bottom: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #279668;
+  border-bottom-color: #82C572;
 }
 .button1 {
-  border: #279668;
+  border: #82C572;
   border-width: 2px;
   border-style: solid;
-  color: #279668;
+  color: #82C572;
 }
 .button1:hover {
-  background-color: #279668;
+  background-color: #82C572;
 }
 .cell2 {
   border-bottom: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #298C76;
+  border-bottom-color: #6BAD7E;
 }
 .button2 {
-  border: #298C76;
+  border: #6BAD7E;
   border-width: 2px;
   border-style: solid;
-  color: #298C76;
+  color: #6BAD7E;
 }
 .button2:hover {
-  background-color: #298C76;
+  background-color: #6BAD7E;
 }
 .cell3 {
   border-bottom: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #2B8284;
+  border-bottom-color: #589889;
 }
 .button3 {
-  border: #2B8284;
+  border: #589889;
   border-width: 2px;
   border-style: solid;
-  color: #2B8284;
+  color: #589889;
 }
 .button3:hover {
-  background-color: #2B8284;
+  background-color: #589889;
 }
 .cell4 {
   border-bottom: solid;
   border-bottom-width: 6px;
-  border-bottom-color: #2E7892;
+  border-bottom-color: #438295;
 }
 .button4 {
-  border: #2E7892;
+  border: #438295;
   border-width: 2px;
   border-style: solid;
-  color: #2E7892;
+  color: #438295;
 }
 .button4:hover {
-  background-color: #2E7892;
+  background-color: #438295;
 }
 .cell5 {
   border-bottom: solid;
