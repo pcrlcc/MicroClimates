@@ -409,6 +409,7 @@ canvas[resize] {
   width: 80%;
   min-height: 440px;
   margin-right: 15px;
+  margin-bottom: 30px;
   background: #fff;
   padding: 20px;
 
@@ -446,6 +447,11 @@ canvas[resize] {
   border-bottom-width: 6px;
   border-bottom-color: #82C572;
 }
+
+
+.flickity-page-dots .dot:nth-child(1) {
+  background: #82C572;
+}
 .button1 {
   border: #82C572;
   border-width: 2px;
@@ -459,6 +465,9 @@ canvas[resize] {
   border-bottom: solid;
   border-bottom-width: 6px;
   border-bottom-color: #6BAD7E;
+}
+.flickity-page-dots .dot:nth-child(2) {
+  background: #6BAD7E;
 }
 .button2 {
   border: #6BAD7E;
@@ -474,6 +483,9 @@ canvas[resize] {
   border-bottom-width: 6px;
   border-bottom-color: #589889;
 }
+.flickity-page-dots .dot:nth-child(3) {
+  background: #589889;
+}
 .button3 {
   border: #589889;
   border-width: 2px;
@@ -488,6 +500,9 @@ canvas[resize] {
   border-bottom-width: 6px;
   border-bottom-color: #438295;
 }
+.flickity-page-dots .dot:nth-child(4) {
+  background: #438295;
+}
 .button4 {
   border: #438295;
   border-width: 2px;
@@ -501,6 +516,9 @@ canvas[resize] {
   border-bottom: solid;
   border-bottom-width: 6px;
   border-bottom-color: #306E9F;
+}
+.flickity-page-dots .dot:nth-child(5) {
+  background: #306E9F;
 }
 .button5 {
   border: #306E9F;
