@@ -328,10 +328,10 @@ img {width: 100%}
   margin-left: 0px;
 }
 .icon-home {
-  background-image: url('../MicroClimates/images/home.svg');
+  background-image: url('images/home.svg');
 }
 .icon-reload {
-  background-image: url('../MicroClimates/images/reload.svg');
+  background-image: url('images/reload.svg');
 }
 
 
