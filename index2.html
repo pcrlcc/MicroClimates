@@ -221,6 +221,22 @@
                   offset: 1.0
               }]
           });
+          var dataPush = true;
+          document.getElementById('canvas').addEventListener("mousemove", function(e){
+              if (dataPush) {
+                  instance.addData([{
+                      x: e.x,
+                      y: e.y,
+                      value: 20
+                  }], true);
+                  dataPush = false;
+                  setTimeout(idleFlag, 20);
+              }
+          });
+
+          function idleFlag () {
+              dataPush = true;
+          }
     </script>
     <!-- - - - Experience Background - - - -->
     <script>

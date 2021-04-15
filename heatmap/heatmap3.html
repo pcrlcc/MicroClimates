@@ -38,42 +38,42 @@ let instance = Heatmap('#canvas', {
         }]
     });
 
-    var gui = new dat.GUI();
-    var Params = function() {
-        this.points = 10000;
-        this.size = 100;
-        this.opacity = 1.0;
-        this.blur = 1.0;
-        this.transalteX = 0;
-        this.transalteY = 0;
-        this.zoom = 1.0;
-        this.rotationAngle = 0.0;
-        this.update = function() {
-        }
-    };
+    // var gui = new dat.GUI();
+    // var Params = function() {
+    //     this.points = 10000;
+    //     this.size = 100;
+    //     this.opacity = 1.0;
+    //     this.blur = 1.0;
+    //     this.transalteX = 0;
+    //     this.transalteY = 0;
+    //     this.zoom = 1.0;
+    //     this.rotationAngle = 0.0;
+    //     this.update = function() {
+    //     }
+    // };
 
-    var params = new Params();
-	gui.add( params, 'size', 1, 100 ).onChange( function () {
-        instance.setSize(params.size);
-    } );
-    gui.add( params, 'opacity', 0, 1 ).onChange( function () {
-        instance.setOpacity(params.opacity);
-    } );
-    gui.add( params, 'blur', 0, 1 ).onChange( function () {
-        instance.setBlur(params.blur);
-    } );
-    gui.add( params, 'transalteX', -instance.width, instance.width ).onChange( function () {
-        instance.setTranslate([params.transalteX, params.transalteY]);
-    } );
-    gui.add( params, 'transalteY', -instance.height, instance.height ).onChange( function () {
-        instance.setTranslate([params.transalteX, params.transalteY]);
-    } );
-    gui.add( params, 'zoom', 0, 2 ).onChange( function () {
-        instance.setZoom(params.zoom);
-    } );
-    gui.add( params, 'rotationAngle', 0, Math.PI * 2 ).onChange( function () {
-        instance.setRotationAngle(params.rotationAngle);
-    } );
+  //   var params = new Params();
+	// gui.add( params, 'size', 1, 100 ).onChange( function () {
+  //       instance.setSize(params.size);
+  //   } );
+  //   gui.add( params, 'opacity', 0, 1 ).onChange( function () {
+  //       instance.setOpacity(params.opacity);
+  //   } );
+  //   gui.add( params, 'blur', 0, 1 ).onChange( function () {
+  //       instance.setBlur(params.blur);
+  //   } );
+  //   gui.add( params, 'transalteX', -instance.width, instance.width ).onChange( function () {
+  //       instance.setTranslate([params.transalteX, params.transalteY]);
+  //   } );
+  //   gui.add( params, 'transalteY', -instance.height, instance.height ).onChange( function () {
+  //       instance.setTranslate([params.transalteX, params.transalteY]);
+  //   } );
+  //   gui.add( params, 'zoom', 0, 2 ).onChange( function () {
+  //       instance.setZoom(params.zoom);
+  //   } );
+  //   gui.add( params, 'rotationAngle', 0, Math.PI * 2 ).onChange( function () {
+  //       instance.setRotationAngle(params.rotationAngle);
+  //   } );
 
     var dataPush = true;
     document.getElementById('canvas').addEventListener("mousemove", function(e){
