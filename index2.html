@@ -188,22 +188,33 @@
     </script> -->
     <!-- - - - Heatmap v2 - - - -->
     <script type="module">
-      import Heatmap from '/js/visualHeatmap.esm.browser.js';
 
-      let data = [];
-      let instance = Heatmap('#canvas', {
-        size: 30.0,
-        max: 100,
-        blur: 1.0,
-        gradient: [{
-              color: [0, 0, 0, 0.0],
-              offset: 0
-          }, {
-              color: [255, 255, 255, 1.0],
-              offset: 1.0
-          }]
-      });
-      visualHeatmap();
+    import Heatmap from '/js/visualHeatmap.esm.browser.js';
+
+    let data = [];
+    let instance = Heatmap('#canvas', {
+            size: 100.0,
+            max: 100,
+            blur: 1.0,
+            zoom: 1.0,
+            gradient: [{
+                color: [255, 255, 255, 0.0],
+                offset: 0
+            }, {
+                color: [212, 225, 255, 1.0],
+                offset: 0.2
+            }, {
+                color: [166, 255, 115, 1.0],
+                offset: 0.45
+            }, {
+                color: [255, 255, 0, 0.5],
+                offset: 0.75
+            }, {
+                color: [255, 0, 0, 1.0],
+                offset: 1.0
+            }]
+        });
+
     </script>
     <!-- - - - Experience Background - - - -->
     <script>
