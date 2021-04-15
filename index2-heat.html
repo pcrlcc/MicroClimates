@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body id="body">
+
+
+    <div id="heatmap2"></div>
+
+    <!-- - - - Heatmap v2 - - - -->
+    <script type="module">
+      import Heatmap from '/js/visualHeatmap.esm.browser.js';
+
+      let data = [];
+      let instance = Heatmap('#canvas', {
+        size: 30.0,
+        max: 100,
+        blur: 1.0,
+        gradient: [{
+              color: [0, 0, 0, 0.0],
+              offset: 0
+          }, {
+              color: [255, 255, 255, 1.0],
+              offset: 1.0
+          }]
+      });
+      visualHeatmap();
+    </script>
+
+
+
+  </body>
+</html>
