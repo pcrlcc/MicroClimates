@@ -300,6 +300,7 @@ a:hover .circle {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -200;
+  z-index: -50;
   background-image: url();
+  pointer-events: none;
 }
