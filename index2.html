@@ -105,7 +105,7 @@
 
     <!-- - - - - - - - - Interactive - - - - - - - - -->
     <span id="circle" class="circle"></span>
-    <div id="canvas" style="height: 100%; width: 100%; background: white;"></div>
+    <div id="canvas" style="height: 350%; width: 100%;"></div>
 
 
 
@@ -158,38 +158,38 @@
     </script>
     <!-- - - - Heatmap - - - -->
     <script type="module">
-    import Heatmap from '/js/visualHeatmap.esm.browser.js';
+      import Heatmap from '/js/visualHeatmap.esm.browser.js';
 
-    let data = [];
-    let instance = Heatmap('#canvas', {
-            size: 100.0,
-            max: 100,
-            blur: 1.0,
-            zoom: 1.0,
-            gradient: [{
-                color: [0, 0, 0, 0.0],
-                offset: 0
-            }, {
-                color: [255, 255, 255, 1.0],
-                offset: 1.0
-            }]
-        });
-        var dataPush = true;
-        document.getElementById('canvas').addEventListener("mousemove", function(e){
-            if (dataPush) {
-                instance.addData([{
-                    x: e.x,
-                    y: e.y,
-                    value: 20
-                }], true);
-                dataPush = false;
-                setTimeout(idleFlag, 20);
-            }
-        });
+      let data = [];
+      let instance = Heatmap('#canvas', {
+              size: 100.0,
+              max: 100,
+              blur: 1.0,
+              zoom: 1.0,
+              gradient: [{
+                  color: [0, 0, 0, 0.0],
+                  offset: 0
+              }, {
+                  color: [255, 255, 255, 1.0],
+                  offset: 1.0
+              }]
+          });
+          var dataPush = true;
+          document.getElementById('canvas').addEventListener("mousemove", function(e){
+              if (dataPush) {
+                  instance.addData([{
+                      x: e.x,
+                      y: e.y,
+                      value: 20
+                  }], true);
+                  dataPush = false;
+                  setTimeout(idleFlag, 20);
+              }
+          });
 
-        function idleFlag () {
-            dataPush = true;
-        }
+          function idleFlag () {
+              dataPush = true;
+          }
     </script>
     <!-- - - - Experience Background - - - -->
     <script>
