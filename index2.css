@@ -224,6 +224,7 @@ a:hover {
   padding-top: 10vh;
   padding-bottom: 10vh;
   z-index: 100;
+  position: relative;
 }
 .experience a:hover {
   color: #fff;
@@ -246,9 +247,9 @@ a:hover {
 .difference-wrapper > a {
   text-decoration: none;
 }
-.difference-wrapper > a:hover .arrow {
+/* .difference-wrapper > a:hover .arrow {
   opacity: .5;
-}
+} */
 .arrow {
   width: 1.3em;
 }
@@ -304,6 +305,7 @@ a:hover .circle {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: url();
+  background-size: cover;
+  background-image: ;
   pointer-events: none;
 }

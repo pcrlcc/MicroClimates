@@ -105,7 +105,7 @@
 
     <!-- - - - - - - - - Interactive - - - - - - - - -->
     <span id="circle" class="circle"></span>
-    <div id="canvas"></div>
+    <!-- <div id="canvas"></div> -->
 
 
 
@@ -157,7 +157,7 @@
       });
     </script>
     <!-- - - - Heatmap - - - -->
-    <script type="module">
+    <!-- <script type="module">
       import Heatmap from '/js/visualHeatmap.esm.browser.js';
 
       let data = [];
@@ -190,31 +190,43 @@
           function idleFlag () {
               dataPush = true;
           }
-    </script>
+    </script> -->
     <!-- - - - Experience Background - - - -->
     <script>
       $(function() {
         $('#e1').hover(function() {
-          $('#bg').css('background-color', '#279767');
+          $('#bg').css('background-image', 'url("images/bg1.png")');
+          $('#e2').css('opacity', '.25');
+          $('#e3').css('opacity', '.25');
         }, function() {
           // on mouseout, reset the background colour
-          $('*').css('background-color', '');
+          $('*').css('background-image', '');
+          $('*').css('opacity', '1');
+          $('*').css('opacity', '1');
         });
       });
       $(function() {
         $('#e2').hover(function() {
-          $('#bg').css('background-color', '#3C7EB4');
+          $('#bg').css('background-image', 'url("images/bg2.png")');
+          $('#e1').css('opacity', '.25');
+          $('#e3').css('opacity', '.25');
         }, function() {
           // on mouseout, reset the background colour
-          $('*').css('background-color', '');
+          $('*').css('background-image', '');
+          $('*').css('opacity', '1');
+          $('*').css('opacity', '1');
         });
       });
       $(function() {
         $('#e3').hover(function() {
-          $('#bg').css('background-color', '#FFCD49');
+          $('#bg').css('background-image', 'url("images/bg3.png")');
+          $('#e1').css('opacity', '.25');
+          $('#e2').css('opacity', '.25');
         }, function() {
           // on mouseout, reset the background colour
-          $('*').css('background-color', '');
+          $('*').css('background-image', '');
+          $('*').css('opacity', '1');
+          $('*').css('opacity', '1  ');
         });
       });
     </script>
