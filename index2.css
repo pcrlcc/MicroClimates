@@ -196,9 +196,12 @@ a:hover {
         }
       }
 
+
+/* ---   Header   --- */
 .header {
   margin-top: 20vh;
   margin-bottom: 15vh;
+  z-index: -100;
 }
     .box-left {
       padding-right: 22%;
@@ -215,17 +218,23 @@ a:hover {
       }
     }
 
+
+/* ---   Explore   --- */
 .explore {
   padding-top: 10vh;
   padding-bottom: 10vh;
+  z-index: 100;
 }
 .experience a:hover {
   color: #fff;
   opacity: .5;
 }
 
+
+/* ---   Make a difference   --- */
 .difference {
   padding-top: 10vh;
+  z-index: -100;
 }
 .difference-wrapper {
   margin-bottom: 2.5vh;
@@ -244,6 +253,8 @@ a:hover {
   width: 1.3em;
 }
 
+
+/* ---   Footer   --- */
 .footer {
   margin-top: 20vh;
   padding-bottom: 5vh;
@@ -261,6 +272,7 @@ a:hover {
 	width: 20px;
 	height: 20px;
   border-radius: 50%;
+  z-index: 1000;
 }
 /* .circle:active {
   background: #fff; Currently there is a bug that does not active this when pointer-events: none; is set on .circle
@@ -275,26 +287,13 @@ a:hover .circle {
 
 /* ---------   Heatmap   -------- */
 
-/* #heatmapContainerWrapper {
-  width: 100%;
-  height: 350%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  pointer-events: auto;
-}
-#heatmapContainer {
-  width:100%;
-  height:100%;
-} */
 #canvas {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: -1000;
   pointer-events: auto;
 }
 
@@ -309,7 +308,7 @@ a:hover .circle {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -50;
+  z-index: 1;
   background-image: url();
   pointer-events: none;
 }
