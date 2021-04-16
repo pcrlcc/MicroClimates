@@ -278,10 +278,12 @@ a:hover {
 a:hover .circle {
   background: #fff;
 }
-@media (hover: none) {
-  .circle  {
+@media (max-width: 500px) {
+  .circle {
     display: none;
   }
+  body, a:hover {
+    cursor: auto;
   }
 }
 
@@ -314,4 +316,11 @@ a:hover .circle {
   background-size: cover;
   background-image: ;
   pointer-events: none;
+}
+
+#e1 {
+  background-size: cover;
+  background-image: url('images/bg1.png'));
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
