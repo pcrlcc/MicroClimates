@@ -156,48 +156,7 @@
         });
       });
     </script>
-    <!-- - - - Heatmap v1 - - - -->
-    <!-- <script src="js/heatmap.js"></script>
-    <script>
-      window.onload = function() {
-        // create a heatmap instance
-        var heatmap = h337.create({
-          container: document.getElementById('heatmapContainer'),
-          radius: 100,
-          blur: .85,
-          gradient: {
-            // enter n keys between 0 and 1 here
-            // for gradient color customization
-            '.95': 'white'
-          },
-          maxOpacity: .8,
-          minOpacity: .001,
-        });
-        var heatmapContainer = document.getElementById('heatmapContainerWrapper');
-
-        heatmapContainer.onmousemove = heatmapContainer.ontouchmove = function(e) {
-          // we need preventDefault for the touchmove
-          e.preventDefault();
-          var x = e.layerX;
-          var y = e.layerY;
-          if (e.touches) {
-            x = e.touches[0].pageX;
-            y = e.touches[0].pageY;
-          }
-
-          heatmap.addData({ x: x, y: y, value: 1 });
-
-        };
-
-        heatmapContainer.onclick = function(e) {
-          var x = e.layerX;
-          var y = e.layerY;
-          heatmap.addData({ x: x, y: y, value: 1 });
-        };
-
-      };
-    </script> -->
-    <!-- - - - Heatmap v2 - - - -->
+    <!-- - - - Heatmap - - - -->
     <script type="module">
     import Heatmap from '/js/visualHeatmap.esm.browser.js';
 
