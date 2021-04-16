@@ -278,6 +278,12 @@ a:hover {
 a:hover .circle {
   background: #fff;
 }
+@media (hover: none) {
+  .circle  {
+    display: none;
+  }
+  }
+}
 
 
 
