@@ -106,6 +106,9 @@ span {
           font-size: 65px;
         }
       }
+      div a {
+        text-decoration: none;
+      }
 
 .medium {
   font-family: 'Inter-Light';
@@ -138,6 +141,11 @@ span {
           font-size: 20px;
         }
       }
+
+
+.medium a, .small a {
+  text-decoration: underline;
+}
 .headline {
   font-family: 'Inter-Medium';
   font-weight: normal;
@@ -207,7 +215,7 @@ a:hover {
       padding-right: 22%;
     }
     .box-right {
-      padding-left: 45%;
+      padding-left: 35%;
     }
     @media (max-width: 500px) {
       .box-left {
@@ -215,6 +223,11 @@ a:hover {
       }
       .box-right {
         padding-left: 18%;
+      }
+    }
+    @media (min-width: 1400px) {
+      .box-right {
+        padding-left: 40%;
       }
     }
 
@@ -244,12 +257,12 @@ a:hover {
 .difference-wrapper > .large {
   margin-bottom: 1vh;
 }
-.difference-wrapper > a {
+#e1, #e2, #e3 {
   text-decoration: none;
 }
-/* .difference-wrapper > a:hover .arrow {
+.difference-wrapper > a:hover .arrow {
   opacity: .5;
-} */
+}
 .arrow {
   width: 1.3em;
 }
@@ -317,10 +330,27 @@ a:hover .circle {
   background-image: ;
   pointer-events: none;
 }
-
-#e1 {
-  background-size: cover;
-  background-image: url('images/bg1.png'));
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+@media (max-width: 500px) {
+  .mobile-card {
+    background-image: url("images/bg1.png");
+    background-size: cover;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
+  .explore {
+    margin-left: -10vw;
+    margin-right: -10vw;
+  }
+  .m-e1 {
+    background-image: url("images/bg1.png");
+  }
+  .m-e2 {
+    background-image: url("images/bg2.png");
+  }
+  .m-e3 {
+    background-image: url("images/bg3.png");
+  }
+  #bg {
+    display: none;
+  }
 }
