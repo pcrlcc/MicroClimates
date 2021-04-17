@@ -2,12 +2,6 @@
 /* CSS Document */
 
 
-/* ---------   Colors   -------- */
-/* Background Light Grey = #F2F2F2 */
-/* Black / Text Dark Grey  = #2D2D2D */
-/* Interaction Mid Grey  = #A1A1A1 */
-
-
 
 
 /* ---------   Fonts   -------- */
@@ -43,7 +37,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-color: #2D2D2D;
 }
@@ -72,6 +65,8 @@ p {
 
 /* ---------   Typography   -------- */
 
+
+/* ---   Logo   --- */
 .logo {
   font-family: 'Cormorant-Medium';
   font-size: 22px;
@@ -81,6 +76,8 @@ p {
 span {
   font-family: 'Inter-Medium';
 }
+
+/* ---   General Formatting   --- */
 .right {
   text-align: right;
 }
@@ -91,6 +88,7 @@ span {
   text-align: center;
 }
 
+/* ---   Core Styles   --- */
 .large {
   font-family: 'Cormorant-Medium';
   font-size: 40px;
@@ -147,6 +145,7 @@ span {
 .medium a, .small a {
   text-decoration: underline;
 }
+
 .headline {
   font-family: 'Inter-Medium';
   font-weight: normal;
@@ -193,8 +192,8 @@ a:hover {
 }
       @media (min-width: 500px) {
         .container {
-          padding-left: 0%;
-          padding-right: 0%;
+          padding-left: 10%;
+          padding-right: 10%;
         }
       }
       @media (min-width: 1400px) {
