@@ -10,7 +10,7 @@
     <meta name="description" content="Abstract explorations of our changing climate on planet Earth. Click, scroll and drag to explore.">
 
     <!-- Links -->
-    <link href="main.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico">
   	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
   	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
@@ -31,95 +31,204 @@
   	<meta name="msapplication-TileColor" content="#FFFFFF">
   	<meta name="msapplication-TileImage" content="/favicon-144.png">
   	<meta name="msapplication-config" content="/browserconfig.xml">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
   </head>
-  <body>
+  <body id="body">
 
 
     <div class="container">
 
 
-      <!-- - - - - - - - - Super 1 - - - - - - - - -->
-      <div class="text-super noselect">
-          <p class="large">Climate warming from <span>human activity is already</span> impacting many natural systems and <span>changing our enviroment.</span></p>
-      </div>
-      <!-- - - - - - - - - Super 2 - - - - - - - - -->
-      <div class="text-super-2nd noselect">
-          <p class="large">By visualising <span>invisible climate changes</span> as interactive explorations, we hope to raise awareness for the little things that <span>will have a huge impact on our future.</span></p>
-      </div>
       <!-- - - - - - - - - Header - - - - - - - - -->
-      <div id="home" class="header noselect">
-          <h1 class="x-large">Micro<span>Climates</spam></h1>
-          <p class="large">Explore and craft simple climate-focused visual artworks, then learn how to <a href="#make-a-change"><span>make a change</span></a>.</p>
-      </div>
-
-
-      <!-- - - - - - - - - Project List - - - - - - - - -->
-      <div class="projects">
-        <a href="costal-flooding.html" class="project-link">
-          <div class="project" style="background-image: url(images/aqua.png)">
-            <p class="large">Coastal Flooding</p>
-          </div>
-        </a>
-        <a href="arctic-algae.html" class="project-link">
-          <div class="project" style="background-image: url(images/alga.png)">
-            <p class="large">Arctic Algae</p>
-          </div>
-        </a>
-        <a href="bee-decline.html" class="project-link">
-          <div class="project" style="background-image: url(images/anthophila.png)">
-            <p class="large">Bee Decline</p>
-          </div>
-        </a>
-        <p>More MicroClimates coming soon.</p>
-      </div>
-
-
-      <!-- - - - - - - - - Make a Change - - - - - - - - -->
-      <div class="change" id="make-a-change">
-        <h2 class="x-large">Make a <span>Change</span></h2>
-        <p class="large">Here are a few simple things that you can do to make an impact.</p>
-        <div class="main-carousel" data-flickity='{ "prevNextButtons": false, "pageDots": false, "contain": true}'>
-          <div class="carousel-cell cell1"><img class="bar-graphic" src="images/bar01.png">
-            <h3>Live car free</h3>                     <h4><em>Save 2.4 tons of CO2 per year</em></h4><p class="small">Try selling your car and taking public transport, riding a bicycle or walking as your primary means of transportation.</p>            <a class="button button1" target="_blank" href="https://webcache.googleusercontent.com/search?q=cache:ZFzIBoyoQK0J:https://atypicallife.org/car-free-living/+&cd=1&hl=en&ct=clnk&gl=de">Find out More ↗</a></div>
-          <div class="carousel-cell cell2"><img class="bar-graphic" src="images/bar02.png">
-            <h3>Avoid one<br>transatlantic flight</h3> <h4><em>Save 1.6 tons of CO2 per year</em></h4><p class="small">Try short distance travel by train or bus on your next holiday. Long distance fligths are high-impact CO2 polluters.</p>              <a class="button button2" target="_blank" href="https://www.bbc.com/future/article/20200218-climate-change-how-to-cut-your-carbon-emissions-when-flying">Find out More ↗</a></div>
-          <div class="carousel-cell cell3"><img class="bar-graphic" src="images/bar03.png">
-            <h3>Buy green energy</h3>                  <h4><em>Save 1.5 tons of CO2 per year</em></h4><p class="small">Try changing your energy provider from coal or natural gas to a renewable wind or solar provider.</p>                                 <a class="button button3" target="_blank" href="https://wwf.panda.org/get_involved/live_green/energy_efficiency/renewable_energy/">Find out More ↗</a></div>
-          <div class="carousel-cell cell4"><img class="bar-graphic" src="images/bar04.png">
-            <h3>Plant-based diet</h3>                  <h4><em>Save 0.8 tons of CO2 per year</em></h4><p class="small">Try reducing or replacing animal products in your diet with plant based ingredients that require less resources to grow & process.</p><a class="button button4" target="_blank" href="https://www.earthday.org/un-report-plant-based-diets-provide-major-opportunities-to-address-climate-crisis/">Find out More ↗</a></div>
-          <div class="carousel-cell cell5"><img class="bar-graphic" src="images/bar05.png">
-            <h3>Wash clothes in cold water</h3>        <h4><em>Save 0.3 tons of CO2 per year</em></h4><p class="small">Try using the cold cycle on your next load of washing. This uses less energy and will make your clothes last longer.</p>              <a class="button button5" target="_blank" href="https://changeforclimate.ca/action/wash-your-clothes-in-cold-water">Find out More ↗</a></div>
+      <div class="header">
+        <div class="box-left">
+          <h1 class="logo">Micro<span>Climates</span></h1>
+          <p class="large left">Climate change from human activity is already impacting our enviroment</p>
+        </div>
+        <div class="box-right">
+          <p class="medium right"><a href="#explore">Explore</a> invisible climate changes and <a href="#difference">make a difference</a>
         </div>
       </div>
 
 
+      <!-- - - - - - - - - Explore - - - - - - - - -->
+      <div id="explore" class="explore">
+        <h2 class="small center headline">Explore</h2>
+        <div class="mobile-card m-e1"><h3 class="experience center"><a id="e1" href="arctic-algae.html">Arctic algae</a></h3></div>
+        <div class="mobile-card m-e2"><h3 class="experience center"><a id="e2" href="costal-flooding.html">Costal flooding</a></h3></div>
+        <div class="mobile-card m-e3"><h3 class="experience center"><a id="e3" href="bee-decline.html">Bee decline</a></h3></div>
+      </div>
+
+
+      <!-- - - - - - - - - Difference - - - - - - - - -->
+      <div id="difference" class="difference">
+        <h2 class="small headline">Make a difference</h2>
+        <div class="difference-wrapper">
+          <a href="https://www.jamieoliver.com/recipes/category/special-diets/vegan/" target="_blank"><p class="large">Change what you eat <img class="arrow" src="images/arrow.svg"></p></a>
+          <p class="small">Go meat & animal product free with recipes from Jamie Oliver</p>
+        </div>
+        <div class="difference-wrapper">
+          <a href="http://m.me/DavidSuzukiFoundation" target="_blank"> <p class="large">Have better conversations <img class="arrow" src="images/arrow.svg"></p></a>
+          <p class="small">Learn to have better climate discussion with this Facebook chatbot from David Suzuki</p>
+        </div>
+        <div class="difference-wrapper">
+          <a href="https://podcasts.apple.com/us/podcast/climate-conversations-a-climate-change-podcast/id1265791892?mt=2" target="_blank"><p class="large">Walk and learn <img class="arrow" src="images/arrow.svg"></p></a>
+          <p class="small">Skip the car ride and listen to a climate podcast while using sustainable transportation</p>
+        </div>
+        <div class="difference-wrapper">
+          <a href="https://www.50waystohelp.com" target="_blank"><p class="large">Need more tips? <img class="arrow" src="images/arrow.svg"></p></a>
+          <p class="small">50waytohelp.com has lots of tips, 50 to be precise</p>
+        </div>
+      </div>
+
+
+
+
+
       <!-- - - - - - - - - Footer - - - - - - - - -->
       <div class=footer>
-        <p class="small fade">Made in Berlin by <a href="https://www.hallo.pm" target="_blank" >Philipp</a> &#38; <a href="http://www.calek.co" target="_blank" >Luke</a> using change recommendations from <a href="https://iopscience.iop.org/article/10.1088/1748-9326/aa7541" target="_blank">IOP Science</a>.</p>
-        <p class="small fade"><a href="mailto:mail@hallo.pm?cc=luke@calek.co&subject=Feedback">Get in touch or leave feedback</a></p>
+        <div class="box-right">
+          <p class="medium right">Have an unseen impact you want to highlight? <a href="mailto:mail@hallo.pm?cc=luke@calek.co&subject=Feedback">Contact us</a>
+        </div>
+        <p class="small right" style="opacity: .5;">Made in Berlin by <a href="https://www.hallo.pm" target="_blank" >Philipp</a> &#38; <a href="https://www.calek.co" target="_blank" >Luke</a></p>
       </div>
+
+
+
+      <!-- - - - - - - - - Background - - - - - - - - -->
+      <div id="bg"></div>
 
     </div>
 
 
-    <!-- - - - - - - - - Particles - - - - - - - - -->
-    <div id="particles-js"  class="particles" style="opacity: 0.75;"></div>
+
+
+    <!-- - - - - - - - - Interactive - - - - - - - - -->
+    <span id="circle" class="circle"></span>
+    <!-- - - - Heatmap: Canvas - - - -->
+    <!-- <div id="canvas"></div> -->
+
 
 
     <!-- - - - - - - - - Scripts - - - - - - - - -->
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- - - - Smooth Scroll - - - -->
     <script>
-      $(document).on('click', 'a[href^="#make-a-change"]', function (event) {
+      $(document).on('click', 'a[href^="#explore"]', function (event) {
         event.preventDefault();
 
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
+      });
+      $(document).on('click', 'a[href^="#difference"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+      });
+    </script>
+    <!-- - - - Mouse Cursor - - - -->
+    <script>
+      jQuery(document).ready(function() {
+
+      var mouseX = 0, mouseY = 0;
+      var xp = 0, yp = 0;
+
+      $(document).mousemove(function(e){
+        mouseX = e.pageX - 10;
+        mouseY = e.pageY - 10;
+      });
+
+      setInterval(function(){
+        xp += (mouseX - xp);
+        yp += (mouseY - yp);
+        $("#circle").css({left: xp +'px', top: yp +'px'});
+      }, 20);
+
+      });
+      $(function() {
+        $('a').hover(function() {
+          $('#circle').css('background-color', '#fff');
+        }, function() {
+          // on mouseout, reset the background colour
+          $('*').css('background-color', '');
+        });
+      });
+    </script>
+    <!-- - - - Heatmap: Code - - - -->
+    <!-- <script type="module">
+      import Heatmap from '/js/visualHeatmap.esm.browser.js';
+
+      let data = [];
+      let instance = Heatmap('#canvas', {
+              size: 100.0,
+              max: 100,
+              blur: 1.0,
+              zoom: 1.0,
+              gradient: [{
+                  color: [0, 0, 0, 0.0],
+                  offset: 0
+              }, {
+                  color: [255, 255, 255, 1.0],
+                  offset: 1.0
+              }]
+          });
+          var dataPush = true;
+          document.getElementById('canvas').addEventListener("mousemove", function(e){
+              if (dataPush) {
+                  instance.addData([{
+                      x: e.x,
+                      y: e.y,
+                      value: 20
+                  }], true);
+                  dataPush = false;
+                  setTimeout(idleFlag, 20);
+              }
+          });
+
+          function idleFlag () {
+              dataPush = true;
+          }
+    </script> -->
+    <!-- - - - Experience Background - - - -->
+    <script>
+      $(function() {
+        $('#e1').hover(function() {
+          $('#bg').css('background-image', 'url("images/algae.png")');
+          $('#e2').css('opacity', '.25');
+          $('#e3').css('opacity', '.25');
+        }, function() {
+          // on mouseout, reset the background colour
+          $('#bg').css('background-image', '');
+          $('#e2').css('opacity', '1');
+          $('#e3').css('opacity', '1');
+        });
+      });
+      $(function() {
+        $('#e2').hover(function() {
+          $('#bg').css('background-image', 'url("images/flood.png")');
+          $('#e1').css('opacity', '.25');
+          $('#e3').css('opacity', '.25');
+        }, function() {
+          // on mouseout, reset the background colour
+          $('#bg').css('background-image', '');
+          $('#e1').css('opacity', '1');
+          $('#e3').css('opacity', '1');
+        });
+      });
+      $(function() {
+        $('#e3').hover(function() {
+          $('#bg').css('background-image', 'url("images/bee.png")');
+          $('#e1').css('opacity', '.25');
+          $('#e2').css('opacity', '.25');
+        }, function() {
+          // on mouseout, reset the background colour
+          $('#bg').css('background-image', '');
+          $('#e1').css('opacity', '1');
+          $('#e2').css('opacity', '1  ');
+        });
       });
     </script>
 
