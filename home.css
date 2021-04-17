@@ -366,13 +366,13 @@ a:hover .circle {
     margin-right: -10vw;
   }
   .m-e1 {
-    background-image: url("images/bg1.png");
+    background-image: url("images/algae.png");
   }
   .m-e2 {
-    background-image: url("images/bg2.png");
+    background-image: url("images/flood.png");
   }
   .m-e3 {
-    background-image: url("images/bg3.png");
+    background-image: url("images/bee.png");
   }
   #bg {
     display: none;
