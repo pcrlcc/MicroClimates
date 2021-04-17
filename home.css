@@ -13,7 +13,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
+  font-family: 'Source';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/source-sans-pro-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/source-sans-pro-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Source-Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('fonts/source-sans-pro-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/source-sans-pro-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* @font-face {
   font-family: "Inter-Medium";
   src: url("fonts/Inter-Medium.woff2") format("woff2"),
        url("fonts/Inter-Medium.woff") format("woff");
@@ -26,7 +44,7 @@
        url("fonts/Inter-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 
 
@@ -45,7 +63,7 @@ body {
   color: #fff;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  cursor: none;
+  cursor: url('images/cursor.svg'), default;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -74,7 +92,7 @@ p {
   text-align: left;
 }
 span {
-  font-family: 'Inter-Medium';
+  font-family: 'Source-Medium';
 }
 
 /* ---   General Formatting   --- */
@@ -92,6 +110,7 @@ span {
 .large {
   font-family: 'Cormorant-Medium';
   font-size: 40px;
+  line-height: 1.2em;
   margin-bottom: 2vh;
 }
       @media (min-width: 500px) {
@@ -109,9 +128,9 @@ span {
       }
 
 .medium {
-  font-family: 'Inter-Light';
+  font-family: 'Source';
   font-size: 26px;
-  line-height: 1.4em;
+  line-height: 1.3em;
   margin-bottom: 2vh;
 }
       @media (min-width: 500px) {
@@ -121,13 +140,13 @@ span {
       }
       @media (min-width: 1400px) {
         .medium {
-          font-size: 40px;
+          font-size: 36px;
         }
       }
 
 
 .small {
-  font-family: 'Inter-Light';
+  font-family: 'Source';
   font-size: 18px;
 }
       @media (min-width: 500px) {
@@ -147,8 +166,11 @@ span {
 }
 
 .headline {
-  font-family: 'Inter-Medium';
+  font-family: 'Source-Medium';
   font-weight: normal;
+  text-transform: uppercase;
+  font-size: 20px;
+
 }
 
 
@@ -176,7 +198,7 @@ a {
 }
 a:hover {
   color: #A1A1A1;
-  cursor: none;
+  cursor: url('images/hover.svg'), default;
 }
 
 
@@ -262,9 +284,11 @@ a:hover {
 }
 .difference-wrapper > a:hover .arrow {
   opacity: .5;
+  margin-left: 20px;
 }
 .arrow {
   width: 1.3em;
+  transition: 0.3s;
 }
 
 
@@ -279,7 +303,7 @@ a:hover {
 
 /* ---------   Cursor   -------- */
 
-.circle {
+/* .circle {
   pointer-events: none;
 	position: absolute;
   border: solid 2px #fff;
@@ -298,7 +322,7 @@ a:hover .circle {
   body, a:hover {
     cursor: auto;
   }
-}
+} */
 
 
 
