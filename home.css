@@ -54,6 +54,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('images/cursor.svg'), default;
 }
 body {
   background-color: #2D2D2D;
@@ -63,7 +64,6 @@ body {
   color: #fff;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  cursor: url('images/cursor.svg'), default;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -177,6 +177,7 @@ span {
 .experience {
   font-family: 'Cormorant-Medium';
   font-size: 40px;
+  font-weight: normal;
 }
       @media (min-width: 500px) {
         .experience {
@@ -198,6 +199,7 @@ a {
 }
 a:hover {
   color: #A1A1A1;
+  cursor: none;
   cursor: url('images/hover.svg'), default;
 }
 
