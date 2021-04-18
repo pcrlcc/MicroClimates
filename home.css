@@ -239,7 +239,7 @@ a:hover {
       padding-right: 22%;
     }
     .box-right {
-      padding-left: 35%;
+      padding-left: 45%;
     }
     @media (max-width: 500px) {
       .box-left {
@@ -252,6 +252,16 @@ a:hover {
     @media (min-width: 1400px) {
       .box-right {
         padding-left: 40%;
+      }
+    }
+    @media (min-width: 1500px) {
+      .box-right {
+        padding-left: 50%;
+      }
+    }
+    @media (min-width: 1600px) {
+      .box-right {
+        padding-left: 60%;
       }
     }
 
@@ -303,41 +313,19 @@ a:hover {
 
 
 
-/* ---------   Cursor   -------- */
-
-/* .circle {
-  pointer-events: none;
-	position: absolute;
-  border: solid 2px #fff;
-	width: 20px;
-	height: 20px;
-  border-radius: 50%;
-  z-index: 1000;
-}
-a:hover .circle {
-  background: #fff;
-}
-@media (max-width: 500px) {
-  .circle {
-    display: none;
-  }
-  body, a:hover {
-    cursor: auto;
-  }
-} */
-
-
-
-
 /* ---------   Heatmap   -------- */
 
-#canvas {
+.heatmap-cont {
+  height: 100%;
   width: 100%;
-  height: 350%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
+}
+#canvas {
+  height: 100%;
+  width: 100%;
 }
 
 
