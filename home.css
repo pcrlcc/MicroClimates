@@ -322,6 +322,11 @@ canvas {
   left: 0;
   z-index: -1000;
 }
+@media (max-width: 500px) {
+  canvas {
+    display: none;
+  }
+}
 
 
 
