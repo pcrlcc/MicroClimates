@@ -54,7 +54,7 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: url('images/cursor.svg'), default;
+  cursor: url('images/cursor.svg') 15 15, default;
 }
 body {
   background-color: #2D2D2D;
@@ -200,7 +200,7 @@ a {
 a:hover {
   color: #A1A1A1;
   cursor: none;
-  cursor: url('images/hover.svg'), default;
+  cursor: url('images/hover.svg') 15 15, default;
 }
 
 
@@ -315,17 +315,12 @@ a:hover {
 
 /* ---------   Heatmap   -------- */
 
-.heatmap-cont {
-  height: 100%;
-  width: 100%;
+
+canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
-}
-#canvas {
-  height: 100%;
-  width: 100%;
+  z-index: -1000;
 }
 
 

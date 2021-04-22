@@ -104,9 +104,7 @@
 
 
     <!-- - - - - - - - - Heatmap - - - - - - - - -->
-    <div class="heatmap-cont">
-      <canvas id="canvas"></canvas>
-    </div>
+    <canvas id="canvas" width="2000" height="3500"></canvas>
 
 
 
@@ -153,13 +151,13 @@
 
       draw();
 
-      get('canvas').onmousemove = function (e) {
+      get('body').onmousemove = function (e) {
           heat.add([e.layerX, e.layerY, .05]);
           frame = frame || window.requestAnimationFrame(draw);
       };
 
-      var radius = 10,
-          blur = 10;
+      var radius = 100,
+          blur = 100;
 
     </script>
 
