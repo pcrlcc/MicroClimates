@@ -103,10 +103,8 @@
 
 
 
-    <!-- - - - - - - - - Interactive - - - - - - - - -->
-    <span id="circle" class="circle"></span>
-    <!-- - - - Heatmap: Canvas - - - -->
-    <!-- <div id="canvas"></div> -->
+    <!-- - - - - - - - - Heatmap - - - - - - - - -->
+    <canvas id="canvas" width="2000" height="3500"></canvas>
 
 
 
@@ -131,70 +129,37 @@
       });
     </script>
 
-    <!-- - - - Mouse Cursor - - - -->
+    <!-- - - - Heatmap v3 - - - -->
+    <script src="js/simpleheat.js"></script>
     <script>
-      jQuery(document).ready(function() {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-      var mouseX = 0, mouseY = 0;
-      var xp = 0, yp = 0;
+      function get(id) {
+          return document.getElementById(id);
+      }
 
-      $(document).mousemove(function(e){
-        mouseX = e.pageX - 10;
-        mouseY = e.pageY - 10;
-      });
+      var heat = simpleheat('canvas'),
+          frame;
 
-      setInterval(function(){
-        xp += (mouseX - xp);
-        yp += (mouseY - yp);
-        $("#circle").css({left: xp +'px', top: yp +'px'});
-      }, 20);
+      function draw() {
+          console.time('draw');
+          heat.draw();
+          console.timeEnd('draw');
+          frame = null;
+      }
 
-      });
-      $(function() {
-        $('a').hover(function() {
-          $('#circle').css('background-color', '#fff');
-        }, function() {
-          // on mouseout, reset the background colour
-          $('*').css('background-color', '');
-        });
-      });
+      draw();
+
+      get('body').onmousemove = function (e) {
+          heat.add([e.layerX, e.layerY, .05]);
+          frame = frame || window.requestAnimationFrame(draw);
+      };
+
+      var radius = 100,
+          blur = 100;
+
     </script>
-
-    <!-- - - - Heatmap: Code - - - -->
-    <!-- <script type="module">
-      import Heatmap from '/js/visualHeatmap.esm.browser.js';
-
-      let data = [];
-      let instance = Heatmap('#canvas', {
-              size: 100.0,
-              max: 100,
-              blur: 1.0,
-              zoom: 1.0,
-              gradient: [{
-                  color: [0, 0, 0, 0.0],
-                  offset: 0
-              }, {
-                  color: [255, 255, 255, 1.0],
-                  offset: 1.0
-              }]
-          });
-          var dataPush = true;
-          document.getElementById('canvas').addEventListener("mousemove", function(e){
-              if (dataPush) {
-                  instance.addData([{
-                      x: e.x,
-                      y: e.y,
-                      value: 20
-                  }], true);
-                  dataPush = false;
-                  setTimeout(idleFlag, 20);
-              }
-          });
-
-          function idleFlag () {
-              dataPush = true;
-          }
-    </script> -->
 
     <!-- - - - Experience Background - - - -->
     <script>
