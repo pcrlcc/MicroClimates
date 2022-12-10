@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: white;
+    }
+    div.box {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.addEventListener("click", function(event) {
+      var box = document.createElement("div");
+      box.className = "box";
+      box.style.width = window.innerWidth + "px";
+      box.style.height = window.innerHeight + "px";
+      box.style.left = "0px";
+      box.style.top = event.pageY + "px";
+      box.style.opacity = 0.5;
+
+      // Choose a random color from the 4 blues
+      var colors = ["#91C5DE", "#367AB2", "#295E86", "#274A56"];
+      var index = Math.floor(Math.random() * colors.length);
+      var color = colors[index];
+      box.style.backgroundColor = color;
+
+      document.body.appendChild(box);
+
+      // Update the position of the box every 1 milliseconds
+      setInterval(function() {
+        var top = parseFloat(box.style.top);
+        box.style.top = (top + 0.5) + "px";
+      }, 1);
+    });
+  </script>
+</body>
+</html>
